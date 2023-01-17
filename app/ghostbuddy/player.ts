@@ -47,7 +47,7 @@ export const player = {
   },
   draw () {
     blueBerry.draw(player.x, player.y, frame, 75, 75)
-    ctx.strokeRect(player.x,player.y,75,75)
+    //ctx.strokeRect(player.x,player.y,75,75)
   }
 }
 
