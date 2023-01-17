@@ -35,9 +35,11 @@ export const player = {
     backgroundDrawer.squares.forEach(
       (square)=>{
         // If we are under the square
-        if (player.y + 70 > square.y) {
-          if (player.x > square.x ) {
-            this.speedY = 0;            
+        if (player.y + 75 > square.y) {
+          if (player.x + 60 > square.x ) { //left
+            if (player.x + 10 < square.x + square.w ) { // right              
+              this.speedY = 0;         
+            }
           }
         }
       }
@@ -45,6 +47,7 @@ export const player = {
   },
   draw () {
     blueBerry.draw(player.x, player.y, frame, 75, 75)
+    ctx.strokeRect(player.x,player.y,75,75)
   }
 }
 
